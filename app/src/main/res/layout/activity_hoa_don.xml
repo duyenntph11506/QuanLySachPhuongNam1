@@ -8,7 +8,7 @@
     tools:context=".HoaDon">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarHD"
+        android:id="@+id/toolbarSach"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#17EF54"
@@ -34,7 +34,7 @@
                 android:textStyle="italic" />
 
             <androidx.appcompat.widget.SearchView
-                android:id="@+id/searchHD"
+                android:id="@+id/searchSach"
                 android:layout_width="wrap_content"
                 android:layout_height="37dp"
                 android:layout_marginLeft="10dp"
@@ -48,28 +48,23 @@
         android:layout_height="match_parent">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvHD"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/carviewHD"
+            android:id="@+id/carviewS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:visibility="gone">
 
             <ListView
-                android:id="@+id/lvHD"
+                android:id="@+id/lvSachSearch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
+
+        <ListView
+            android:id="@+id/lvHD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </FrameLayout>
 

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class PhuongNam extends AppCompatActivity {
     ImageView img1, img2, img3, img4, img5, img6;
@@ -31,7 +30,7 @@ public class PhuongNam extends AppCompatActivity {
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhuongNam.this, Sach.class);
+                Intent intent = new Intent(PhuongNam.this, SachActivity.class);
                 startActivity(intent);
             }
         });

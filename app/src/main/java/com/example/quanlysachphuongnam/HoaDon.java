@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -21,10 +18,11 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.quanlysachphuongnam.adapter.RecyclerHoaDon;
+import com.example.quanlysachphuongnam.adapter.ListviewHoaDon;
 import com.example.quanlysachphuongnam.model.HoaDons;
+import com.example.quanlysachphuongnam.sql.HoaDonDao;
+import com.example.quanlysachphuongnam.sql.mysql;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,15 +33,15 @@ public class HoaDon extends AppCompatActivity {
     TextInputEditText textInputEditText1;
     TextInputEditText textInputEditText2;
     Spinner spn;
-    RecyclerView recyclerView;
     SearchView searchView;
-    RecyclerHoaDon recyclerHoaDon;
+    ListviewHoaDon listviewHoaDon;
     List<HoaDons> hoaDonsList;
+    ListView lvSearch;
     ListView lv;
     ArrayAdapter arrayAdapter ;
     List<String> listMa;
     CardView cardView;
-
+HoaDonDao hoaDonDao;
 
 
 
@@ -52,26 +50,22 @@ public class HoaDon extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hoa_don);
 
-        toolbar = findViewById(R.id.toolbarHD);
+        toolbar = findViewById(R.id.toolbarSach);
         setSupportActionBar(toolbar);
-        searchView = findViewById(R.id.searchHD);
-        recyclerView = findViewById(R.id.rcvHD);
+        searchView = findViewById(R.id.searchSach);
         lv  = findViewById(R.id.lvHD);
-        cardView = findViewById(R.id.carviewHD);
+        lvSearch = findViewById(R.id.lvSachSearch);
+        cardView = findViewById(R.id.carviewS);
         listMa = new ArrayList<>();
         hoaDonsList = new ArrayList<>();
-        hoaDonsList.add(new HoaDons("conan","1345"));
-        hoaDonsList.add(new HoaDons("abc","34566"));
-        hoaDonsList.add(new HoaDons("bff","678"));
-        hoaDonsList.add(new HoaDons("gahh","876"));
-        hoaDonsList.add(new HoaDons("<3","906"));
-        recyclerHoaDon = new RecyclerHoaDon(hoaDonsList,HoaDon.this,R.layout.lvhoadon);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.addItemDecoration(new DividerItemDecoration(HoaDon.this,DividerItemDecoration.VERTICAL));
-        recyclerView.setAdapter(recyclerHoaDon);
+      hoaDonDao = new HoaDonDao(new mysql(HoaDon.this));
+      hoaDonsList = hoaDonDao.getData();
+        listviewHoaDon = new ListviewHoaDon(hoaDonsList,HoaDon.this,R.layout.lvhoadon);
+        lv.setAdapter(listviewHoaDon);
+
 
         arrayAdapter = new ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,listMa);
-        lv.setAdapter(arrayAdapter);
+        lvSearch.setAdapter(arrayAdapter);
 
         searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -149,7 +143,7 @@ public class HoaDon extends AppCompatActivity {
         menuInflater.inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-//jjjjjjj
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -164,6 +158,12 @@ public class HoaDon extends AppCompatActivity {
                 btn1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        String ma = textInputEditText1.getText().toString().trim();
+                        String soLuong = textInputEditText2.getText().toString().trim();
+                       HoaDons hoaDons = new HoaDons(ma,"");
+                        hoaDonsList.add(hoaDons);
+                        lv.deferNotifyDataSetChanged();
+                        hoaDonDao.insert(hoaDons);
                         dialog.cancel();
                     }
                 });

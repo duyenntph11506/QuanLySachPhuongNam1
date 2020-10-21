@@ -3,54 +3,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="70dp">
+    android:layout_height="100dp">
+
 
     <TextView
-        android:id="@+id/tvmahoadon"
+        android:id="@+id/tvTen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mã hóa đơn"
+        android:text="Tên Người Dùng"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.098" />
 
     <TextView
-        android:id="@+id/tvNgay"
+        android:id="@+id/tvMatKhau"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ngày"
+        android:text="Mật Khẩu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.686" />
+        app:layout_constraintVertical_bias="0.506" />
+
+    <TextView
+        android:id="@+id/tvEmailSĐT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email/SĐT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 
     <ImageView
-        android:id="@+id/imgXoa"
-        android:layout_width="19dp"
-        android:layout_height="20dp"
+        android:id="@+id/imgX"
+        android:layout_width="22dp"
+        android:layout_height="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895"
+        app:layout_constraintVertical_bias="0.8"
         app:srcCompat="@drawable/x" />
 
     <ImageView
         android:id="@+id/imgSua"
-        android:layout_width="20dp"
-        android:layout_height="25dp"
+        android:layout_width="22dp"
+        android:layout_height="29dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
-        app:layout_constraintStart_toEndOf="@+id/tvmahoadon"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toEndOf="@+id/tvTen"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.222"
-        app:srcCompat="@drawable/iconsua" />
-
+        app:layout_constraintVertical_bias="0.225"
+        app:srcCompat="@drawable/sua" />
 </androidx.constraintlayout.widget.ConstraintLayout>

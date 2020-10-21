@@ -9,11 +9,11 @@ import com.example.quanlysachphuongnam.model.HoaDons;
 import java.util.ArrayList;
 import java.util.List;
 
-public class hoadon {
+public class HoaDonDao {
     private mysql mySql;
     SQLiteDatabase db;
 
-    public hoadon(mysql mySql) {
+    public HoaDonDao(mysql mySql) {
         this.mySql = mySql;
         db = mySql.getWritableDatabase();
     }

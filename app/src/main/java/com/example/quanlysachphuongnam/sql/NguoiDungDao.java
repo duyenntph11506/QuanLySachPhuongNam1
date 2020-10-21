@@ -3,18 +3,16 @@ package com.example.quanlysachphuongnam.sql;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.quanlysachphuongnam.User;
 import com.example.quanlysachphuongnam.model.NguoiDung;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class nguoidung {
+public class NguoiDungDao {
     private mysql mySql;
     SQLiteDatabase sqLiteDatabase;
-    public nguoidung(mysql mySql) {
+    public NguoiDungDao(mysql mySql) {
         this.mySql = mySql;
         sqLiteDatabase = mySql.getWritableDatabase();
     }
@@ -36,7 +34,6 @@ public class nguoidung {
                 String name = cursor.getString(0);
                 String password = cursor.getString(1);
                 String sdt = cursor.getString(2);
-                byte[] img = cursor.getBlob(3);
                 userList.add(new NguoiDung(name,sdt,password));
             }
             cursor.close();

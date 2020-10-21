@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TheLoai"></activity>
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".TheLoai" />
         <activity android:name=".SachBanChay" />
         <activity android:name=".HoaDon" />
         <activity android:name=".ThongKe" />
-        <activity android:name=".Sach" />
+        <activity android:name=".SachActivity" />
         <activity android:name=".TimKiem" />
         <activity android:name=".XoaSach" />
         <activity android:name=".SuaSach" />
@@ -22,7 +23,6 @@
         <activity android:name=".XoaNguoiDung" />
         <activity android:name=".SuaNguoiDung" />
         <activity android:name=".ThemNguoiDung" />
-        <activity android:name=".DanhSachNguoiDung" />
         <activity android:name=".QuanLyNguoiDung" />
         <activity android:name=".PhuongNam" />
         <activity android:name=".QuenMatKhau" />

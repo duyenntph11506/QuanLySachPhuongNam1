@@ -1,20 +1,18 @@
 package com.example.quanlysachphuongnam.model;
 
 public class Sach {
-    private String ten;
     private String ma;
+    private String ten;
     private int soLuong;
-    private String gia;
+    private double gia;
     private String theLoai;
     private String tacgia;
     private String nhaxuatban;
     private String thoigian;
 
-    public Sach(String ten, String ma, int soLuong, String gia) {
+    public static void setTenSach(String toString) {
     }
 
-    public Sach(String ten, String ma, int soLuong, String gia, String theLoai) {
-    }
 
     public String getTen() {
         return ten;
@@ -40,11 +38,11 @@ public class Sach {
         this.soLuong = soLuong;
     }
 
-    public String getGia() {
+    public double getGia() {
         return gia;
     }
 
-    public void setGia(String gia) {
+    public void setGia(double gia) {
         this.gia = gia;
     }
 
@@ -80,14 +78,18 @@ public class Sach {
         this.thoigian = thoigian;
     }
 
-    public Sach(String ten, String ma, int soLuong, String gia, String theLoai, String tacgia, String nhaxuatban, String thoigian) {
-        this.ten = ten;
+
+    public Sach(String ma, String ten, int soLuong, double gia, String theLoai, String tacgia, String nhaxuatban, String thoigian) {
         this.ma = ma;
+        this.ten = ten;
         this.soLuong = soLuong;
         this.gia = gia;
         this.theLoai = theLoai;
         this.tacgia = tacgia;
         this.nhaxuatban = nhaxuatban;
         this.thoigian = thoigian;
+    }
+
+    public Sach() {
     }
 }

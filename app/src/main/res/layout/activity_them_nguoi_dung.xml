@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ThemNguoiDung">
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/txtDK1"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         app:counterEnabled="true"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.36">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtUserNameDangKy"
+            android:id="@+id/txtUserNameTK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tên tài khoản"
@@ -27,7 +27,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtPassWordDangKy"
+        android:id="@+id/txtDK2"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +45,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtEmailVaSoDienThoaiDangKy"
+        android:id="@+id/txtDK3"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +74,7 @@
         app:layout_constraintVertical_bias="0.802" />
 
     <Button
-        android:id="@+id/btnDangKy"
+        android:id="@+id/btnDangKyTk"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="#A5CD39"
@@ -93,7 +93,7 @@
         android:layout_height="112dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintBottom_toTopOf="@+id/txtDK1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.456"

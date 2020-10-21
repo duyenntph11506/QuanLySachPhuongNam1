@@ -1,0 +1,232 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputMaSach"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputTenSach"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mã sách"
+
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="293dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTenSach"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/inputGiaBan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMaSach"
+        app:layout_constraintVertical_bias="0.186">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên sách"
+
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="390dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/inputGiaBan"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputTacGia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTenSach"
+        app:layout_constraintVertical_bias="0.29">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Giá bán"
+            android:inputType="number"
+
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="293dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTacGia"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputNhaXB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputGiaBan"
+        app:layout_constraintVertical_bias="0.396">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tác giả"
+
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="293dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/inputSoLuong"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputNgayNhap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTheLoai"
+        app:layout_constraintVertical_bias="0.7">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Số lượng"
+
+            android:textColorHint="#B8B0B0"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="293dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/inputNhaXB"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputTheLoai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTacGia"
+        app:layout_constraintVertical_bias="0.499">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhà xuất bản"
+            android:inputType="text"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="293dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputNgayNhap"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:textColorHint="#B8B0B0"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputSoLuong"
+        app:layout_constraintVertical_bias="0.8">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ngày nhập"
+            android:inputType="date"
+            android:textColorHint="#B8B0B0"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="293dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNgayNhap"
+        app:layout_constraintVertical_bias="0.9">
+
+        <Button
+            android:id="@+id/btnNhapSach"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Nhập sách" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/inputNgayNhap"
+        app:layout_constraintVertical_bias="0.57">
+
+        <Button
+            android:id="@+id/btnHuySach"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Hủy" />
+    </androidx.cardview.widget.CardView>
+
+
+    <Spinner
+        android:id="@+id/inputTheLoai"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputSoLuong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNhaXB"
+        app:layout_constraintVertical_bias="0.597">
+
+    </Spinner>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
